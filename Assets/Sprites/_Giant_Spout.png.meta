@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 6c22b605c20b849a59a2398c5a149e36
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5127165838884176082
+    second: _Giant_Spout_0
+  - first:
+      213: 8513630841227641424
+    second: _Giant_Spout_1
+  - first:
+      213: 2874499273210437516
+    second: _Giant_Spout_2
+  - first:
+      213: -1488278152398959355
+    second: _Giant_Spout_3
+  - first:
+      213: -3372559995687642387
+    second: _Giant_Spout_4
+  - first:
+      213: 9193109022438040576
+    second: _Giant_Spout_5
+  - first:
+      213: -6345762194453646053
+    second: _Giant_Spout_6
+  - first:
+      213: -6617516931232786416
+    second: _Giant_Spout_7
+  - first:
+      213: 3140183065680559106
+    second: _Giant_Spout_8
+  - first:
+      213: 4386227226565238964
+    second: _Giant_Spout_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: _Giant_Spout_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1834
+        width: 186
+        height: 246
+      alignment: 9
+      pivot: {x: 0.43004572, y: 0.05651806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f7acc95d5a8d8b0800000000000000
+      internalID: -5127165838884176082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1785
+        width: 266
+        height: 304
+      alignment: 9
+      pivot: {x: 0.364542, y: 0.0423588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0520f28942e762670800000000000000
+      internalID: 8513630841227641424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_2
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1740
+        width: 285
+        height: 339
+      alignment: 9
+      pivot: {x: 0.33845365, y: 0.042368483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f93d6fbd544e720800000000000000
+      internalID: 2874499273210437516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_3
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1703
+        width: 333
+        height: 392
+      alignment: 9
+      pivot: {x: 0.33533448, y: 0.03578871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d0947d7e2985be0800000000000000
+      internalID: -1488278152398959355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_4
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1280
+        width: 384
+        height: 459
+      alignment: 9
+      pivot: {x: 0.33239806, y: 0.029275067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea58517d824231d0800000000000000
+      internalID: -3372559995687642387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_5
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1000
+        width: 482
+        height: 672
+      alignment: 9
+      pivot: {x: 0.34295338, y: 0.020787558}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004abdfd2fb749f70800000000000000
+      internalID: 9193109022438040576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_6
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 1669
+        width: 90
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15bc7ac7e25fe7a0800000000000000
+      internalID: -6345762194453646053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_7
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 1670
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0189cb2896bd924a0800000000000000
+      internalID: -6617516931232786416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_8
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1111
+        width: 409
+        height: 548
+      alignment: 9
+      pivot: {x: 0.30244353, y: 0.026065353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c369f5cdb249b20800000000000000
+      internalID: 3140183065680559106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Giant_Spout_9
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 238
+        width: 554
+        height: 772
+      alignment: 9
+      pivot: {x: 0.42227003, y: 0.015725387}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0619f5c620fdc30800000000000000
+      internalID: 4386227226565238964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b40d63ed1654747989a7362876a2523a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      _Giant_Spout_0: -5127165838884176082
+      _Giant_Spout_1: 8513630841227641424
+      _Giant_Spout_2: 2874499273210437516
+      _Giant_Spout_3: -1488278152398959355
+      _Giant_Spout_4: -3372559995687642387
+      _Giant_Spout_5: 9193109022438040576
+      _Giant_Spout_6: -6345762194453646053
+      _Giant_Spout_7: -6617516931232786416
+      _Giant_Spout_8: 3140183065680559106
+      _Giant_Spout_9: 4386227226565238964
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

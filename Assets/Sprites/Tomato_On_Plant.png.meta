@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 42b6d681fb1934615bbeb9936255a8d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8076950180800352247
+    second: Tomato_On_Plant_0
+  - first:
+      213: 3223522790197827646
+    second: Tomato_On_Plant_1
+  - first:
+      213: 4461789145139299996
+    second: Tomato_On_Plant_2
+  - first:
+      213: -509531477640401166
+    second: Tomato_On_Plant_3
+  - first:
+      213: -2331031815906349643
+    second: Tomato_On_Plant_4
+  - first:
+      213: 4887075512760880607
+    second: Tomato_On_Plant_5
+  - first:
+      213: -8696823006171124308
+    second: Tomato_On_Plant_6
+  - first:
+      213: 706382740964726929
+    second: Tomato_On_Plant_7
+  - first:
+      213: 5026520658010092880
+    second: Tomato_On_Plant_8
+  - first:
+      213: 1387409295550085295
+    second: Tomato_On_Plant_9
+  - first:
+      213: 256142588805812169
+    second: Tomato_On_Plant_10
+  - first:
+      213: -5512168209500881409
+    second: Tomato_On_Plant_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tomato_On_Plant_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1701
+        width: 555
+        height: 746
+      alignment: 9
+      pivot: {x: 0.49834985, y: 0.017525434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffc12b5567171070800000000000000
+      internalID: 8076950180800352247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_1
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1706
+        width: 555
+        height: 746
+      alignment: 9
+      pivot: {x: 0.5025792, y: 0.017021935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e381e1316e04cbc20800000000000000
+      internalID: 3223522790197827646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_2
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1686
+        width: 555
+        height: 746
+      alignment: 9
+      pivot: {x: 0.50429994, y: 0.018520162}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96c8b286957bed30800000000000000
+      internalID: 4461789145139299996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_3
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 846
+        width: 555
+        height: 746
+      alignment: 9
+      pivot: {x: 0.5022092, y: 0.020070095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe2d5912d7cde8f0800000000000000
+      internalID: -509531477640401166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_4
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 834
+        width: 555
+        height: 746
+      alignment: 9
+      pivot: {x: 0.5044184, y: 0.021713708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bda4cce9e286afd0800000000000000
+      internalID: -2331031815906349643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_5
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 820
+        width: 555
+        height: 746
+      alignment: 9
+      pivot: {x: 0.5056704, y: 0.016979882}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd4f98394162d340800000000000000
+      internalID: 4887075512760880607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 546
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cada9babd8dae4780800000000000000
+      internalID: -8696823006171124308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_7
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 491
+        width: 70
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1985bae3c539dc900800000000000000
+      internalID: 706382740964726929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 410
+        width: 71
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055bad428e9c1c540800000000000000
+      internalID: 5026520658010092880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_9
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 395
+        width: 68
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8765b4761114310800000000000000
+      internalID: 1387409295550085295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_10
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 257
+        width: 66
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf8e91d3500e8300800000000000000
+      internalID: 256142588805812169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_On_Plant_11
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 168
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdbf7ad738d083b0800000000000000
+      internalID: -5512168209500881409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e7809034b3e814c39934197b7306ad47
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tomato_On_Plant_0: 8076950180800352247
+      Tomato_On_Plant_1: 3223522790197827646
+      Tomato_On_Plant_10: 256142588805812169
+      Tomato_On_Plant_11: -5512168209500881409
+      Tomato_On_Plant_2: 4461789145139299996
+      Tomato_On_Plant_3: -509531477640401166
+      Tomato_On_Plant_4: -2331031815906349643
+      Tomato_On_Plant_5: 4887075512760880607
+      Tomato_On_Plant_6: -8696823006171124308
+      Tomato_On_Plant_7: 706382740964726929
+      Tomato_On_Plant_8: 5026520658010092880
+      Tomato_On_Plant_9: 1387409295550085295
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
