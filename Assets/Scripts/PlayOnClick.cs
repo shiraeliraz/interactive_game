@@ -1,15 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayOnClick : MonoBehaviour
 {
-    private Animator animator;
-    [SerializeField] private string animationName;
+    [SerializeField] private List<string> animationNames;
+    [SerializeField] private Collider2D colliderToEnable;
+    private int _currentAnimation = 0;
+    private Animator _animator;
+    private bool _isPlaying;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
-        animator.enabled = false;
+        _animator = GetComponent<Animator>();
+        _animator.enabled = false;
     }
 
     private void Update()
@@ -33,8 +37,29 @@ public class PlayOnClick : MonoBehaviour
 
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            animator.enabled = true;
-            animator.Play(animationName);
+            if (_isPlaying)
+            {
+                return;
+            }
+
+            if (_currentAnimation >= animationNames.Count)
+            {
+                return;
+            }
+            _animator.enabled = true;
+            _animator.Play(animationNames[_currentAnimation]);
+            _isPlaying = true;
         }
+    }
+
+    public void CarryOn()
+    {
+        _currentAnimation++;
+        _isPlaying = false;
+    }
+
+    public void EnableTheirCollider()
+    {
+        colliderToEnable.enabled = true;
     }
 }
