@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class CameraGlide : MonoBehaviour
+public class BackgroundGlide : MonoBehaviour
 {
     [Serializable]
     public struct CameraInstructions
@@ -16,20 +16,25 @@ public class CameraGlide : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.CameraGlide += GlideCamera;
+        GameEvents.StartDriving += GlideBackground;
     }
 
     private void OnDisable()
     {
-        GameEvents.CameraGlide -= GlideCamera;
+        GameEvents.StartDriving -= GlideBackground;
     }
-    private void GlideCamera()
+    private void GlideBackground()
     {
         _currentPos++;
         if (_currentPos < cameraInstructions.Count)
         {
-            transform.DOMove(cameraInstructions[_currentPos].pos, cameraInstructions[_currentPos].duration);
+            transform.DOMove(cameraInstructions[_currentPos].pos, cameraInstructions[_currentPos].duration).OnComplete(StopDriving);
         }
-        
+        GameEvents.CameraGlide?.Invoke();
+    }
+
+    private void StopDriving()
+    {
+        GameEvents.StopDriving?.Invoke();
     }
 }

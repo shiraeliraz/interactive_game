@@ -20,10 +20,11 @@ public class Tomato : MonoBehaviour
     {
         GameEvents.CrateReachedTruck -= OnCrateReachedTruck;
     }
-    // private void Start()
-    // {
-    //     _rigidbody = GetComponent<Rigidbody2D>();
-    // }
+    private void Start()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody.gravityScale = 0;
+    }
 
     private void Jump()
     {
@@ -73,7 +74,8 @@ public class Tomato : MonoBehaviour
     private void OnCrateReachedTruck()
     {
         _inCrate = true;
-        // _rigidbody.gravityScale = 1;
+        _rigidbody.gravityScale = 1;
+        transform.SetParent(null);
     }
 
 }

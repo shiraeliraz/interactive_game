@@ -5,6 +5,8 @@ public class Crate : MonoBehaviour
 {
     [SerializeField] private Vector3 tomatoLoadLocation;
     [SerializeField] private float firstMoveDuration = 1f;
+    [SerializeField] private GameObject truck;
+
     private int _tomatoCounter;
     private Collider2D _collider;
 
@@ -25,7 +27,6 @@ public class Crate : MonoBehaviour
     private void GainTomato()
     {
         _tomatoCounter++;
-        Debug.Log(_tomatoCounter);
         if (_tomatoCounter == 5)
         {
             GameEvents.CameraGlide.Invoke();
@@ -37,4 +38,5 @@ public class Crate : MonoBehaviour
     {
         GameEvents.CrateReachedTruck?.Invoke();
     }
+
 }
