@@ -8,17 +8,24 @@ public class Tomato : MonoBehaviour
     [SerializeField] private float jumpPower = 2f;
     [SerializeField] private float duration = 0.6f;
     [SerializeField] private GameObject crate;
+    [SerializeField] private GameObject tomatoToActivate;
     private bool _inCrate = false;
     private Rigidbody2D _rigidbody;
 
     private void OnEnable()
     {
         GameEvents.CrateReachedTruck += OnCrateReachedTruck;
+        GameEvents.StopDriving += ParentCrate;
+        GameEvents.StopDriving += OnTruckStop;
+        GameEvents.CrateReachedFloor += OnCrateReachedFloor;
     }
 
     private void OnDisable()
     {
         GameEvents.CrateReachedTruck -= OnCrateReachedTruck;
+        GameEvents.StopDriving -= ParentCrate;
+        GameEvents.StopDriving -= OnTruckStop;
+        GameEvents.CrateReachedFloor -= OnCrateReachedFloor;
     }
     private void Start()
     {
@@ -28,7 +35,6 @@ public class Tomato : MonoBehaviour
 
     private void Jump()
     {
-        Transform originalParent = transform.parent;
         transform.SetParent(null);
 
         transform.DOJump(crateTarget, jumpPower, 1, duration)
@@ -71,11 +77,32 @@ public class Tomato : MonoBehaviour
         GameEvents.TomatoInBasket?.Invoke();
     }
 
+    private void OnTruckStop()
+    {
+        _rigidbody.simulated = false;
+        transform.SetParent(crate.transform);
+        float newHeight = transform.position.y + 0.5f;
+        transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
+    }
+
     private void OnCrateReachedTruck()
     {
         _inCrate = true;
         _rigidbody.gravityScale = 1;
         transform.SetParent(null);
+    }
+
+    private void OnCrateReachedFloor()
+    {
+        tomatoToActivate.SetActive(true);
+        transform.SetParent(null);
+        tomatoToActivate.transform.position = transform.position;
+        tomatoToActivate.transform.rotation = transform.rotation;
+        SpriteRenderer newTomatoRenderer = tomatoToActivate.GetComponent<SpriteRenderer>();
+        SpriteRenderer oldTomatoRenderer = GetComponent<SpriteRenderer>();
+        newTomatoRenderer.sprite = oldTomatoRenderer.sprite;
+        gameObject.SetActive(false);
+        
     }
 
 }

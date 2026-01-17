@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -10,18 +11,21 @@ public class Crate : MonoBehaviour
     private int _tomatoCounter;
     private Collider2D _collider;
 
+
     private void OnEnable()
     {
         transform.DOMove(tomatoLoadLocation, firstMoveDuration);
         GameEvents.TomatoInBasket += GainTomato;
         _collider =  GetComponent<Collider2D>();
         _collider.enabled = false;
-        
+        GameEvents.StopDriving += OnTruckStopped;
+
     }
 
     private void OnDisable()
     {
         GameEvents.TomatoInBasket -= GainTomato;
+        GameEvents.StopDriving -= OnTruckStopped;
     }
 
     private void GainTomato()
@@ -37,6 +41,22 @@ public class Crate : MonoBehaviour
     public void ReachTruck()
     {
         GameEvents.CrateReachedTruck?.Invoke();
+        _collider.enabled = false;
+    }
+
+    private void OnTruckStopped()
+    {
+        _collider.enabled = true;
+    }
+
+    public void DisableCollider()
+    {
+        _collider.enabled = false;
+    }
+
+    public void CrateReachedFloor()
+    {
+        GameEvents.CrateReachedFloor?.Invoke();
     }
 
 }

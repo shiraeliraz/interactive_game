@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class BackgroundGlide : MonoBehaviour
+public class BackgroundGlideForTruck : MonoBehaviour
 {
     [Serializable]
     public struct CameraInstructions
