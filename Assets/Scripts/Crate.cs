@@ -16,7 +16,7 @@ public class Crate : MonoBehaviour
     private void OnEnable()
     {
         transform.DOMove(tomatoLoadLocation, firstMoveDuration);
-        GameEvents.TomatoInBasket += GainTomato;
+        GameEvents.TomatoInCrate += GainTomato;
         _collider =  GetComponent<Collider2D>();
         _collider.enabled = false;
         GameEvents.StopDriving += OnTruckStopped;
@@ -25,7 +25,7 @@ public class Crate : MonoBehaviour
 
     private void OnDisable()
     {
-        GameEvents.TomatoInBasket -= GainTomato;
+        GameEvents.TomatoInCrate -= GainTomato;
         GameEvents.StopDriving -= OnTruckStopped;
     }
 

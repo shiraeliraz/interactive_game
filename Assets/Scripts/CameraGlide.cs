@@ -28,7 +28,7 @@ public class CameraGlide : MonoBehaviour
         _currentPos++;
         if (_currentPos < cameraInstructions.Count)
         {
-            transform.DOMove(cameraInstructions[_currentPos].pos, cameraInstructions[_currentPos].duration);
+            transform.DOMove(cameraInstructions[_currentPos].pos, cameraInstructions[_currentPos].duration).SetEase(Ease.Linear);
         }
         
     }

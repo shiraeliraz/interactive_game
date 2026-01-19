@@ -9,8 +9,15 @@ public class MarketTomato : MonoBehaviour
     [SerializeField] private Vector3 marketTarget;
     [SerializeField] private float jumpPower = 2f;
     [SerializeField] private float duration = 1f;
+    
+    [Header("Bag Settings")]
+    [SerializeField] private GameObject bag;
+    [SerializeField] private float jumpPower2 = 2f;
+    [SerializeField] private float duration2 = 1f;
 
-    private bool _atMarket = false;
+
+    private bool _atCrate = true;
+    private bool _canBeBought = false;
     private Tomato _tomatoScript;
     private void Update()
     {
@@ -34,20 +41,66 @@ public class MarketTomato : MonoBehaviour
 
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            Jump();
+            if (_atCrate)
+            {
+                JumpToMarket();
+            }
+            else
+            {
+                if (_canBeBought)
+                {
+                    JumpToBag();
+                }
+            }
+            
         }
     }
 
-    private void Jump()
+    private void OnEnable()
     {
+        GameEvents.AllTomatoesInMarket += EnableBuy;
+        GameEvents.TomatoInBag += DisableBuy;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.AllTomatoesInMarket -= EnableBuy;
+        GameEvents.TomatoInBag -= DisableBuy;
+    }
+
+    private void JumpToMarket()
+    {
+        _atCrate = false;
         transform.DOJump(marketTarget, jumpPower, 1, duration)
-            .SetUpdate(true).OnComplete(FinishedJump);
+            .SetUpdate(true).OnComplete(FinishedJumpToMarket);
         transform.DORotate(Vector3.zero, 0.25f)
             .SetEase(Ease.Linear);
     }
+    private void JumpToBag()
+    {
+        _atCrate = false;
+        transform.parent = bag.transform;
+        transform.DOJump(bag.transform.position, jumpPower2, 1, duration2)
+            .SetUpdate(true).OnComplete(FinishedJumpToBag);
+    }
 
-    private void FinishedJump()
+    private void FinishedJumpToMarket()
     {
         GameEvents.TomatoReachedMarket?.Invoke();
+    }
+
+    private void FinishedJumpToBag()
+    {
+        GameEvents.TomatoInBag?.Invoke();
+    }
+
+    private void EnableBuy()
+    {
+        _canBeBought = true;
+    }
+
+    private void DisableBuy()
+    {
+        _canBeBought = false;
     }
 }

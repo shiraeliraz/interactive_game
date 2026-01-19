@@ -74,7 +74,7 @@ public class Tomato : MonoBehaviour
     private void ParentCrate()
     {
         transform.SetParent(crate.transform);
-        GameEvents.TomatoInBasket?.Invoke();
+        GameEvents.TomatoInCrate?.Invoke();
     }
 
     private void OnTruckStop()
