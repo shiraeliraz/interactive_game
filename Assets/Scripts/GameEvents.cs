@@ -9,5 +9,7 @@ public class GameEvents
     public static Action CrateReachedTruck;
     public static Action StartDriving;
     public static Action CrateReachedFloor;
+    public static Action TomatoReachedMarket;
+    public static Action AllTomatoesInMarket;
 
 }

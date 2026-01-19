@@ -3,7 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TomatoToMarket : MonoBehaviour
+public class MarketTomato : MonoBehaviour
 {
     [Header("Market Settings")]
     [SerializeField] private Vector3 marketTarget;
@@ -40,9 +40,14 @@ public class TomatoToMarket : MonoBehaviour
 
     private void Jump()
     {
-        Debug.Log("Tomato Jumped!");
-
         transform.DOJump(marketTarget, jumpPower, 1, duration)
-            .SetUpdate(true);
+            .SetUpdate(true).OnComplete(FinishedJump);
+        transform.DORotate(Vector3.zero, 0.25f)
+            .SetEase(Ease.Linear);
+    }
+
+    private void FinishedJump()
+    {
+        GameEvents.TomatoReachedMarket?.Invoke();
     }
 }

@@ -7,6 +7,7 @@ public class Crate : MonoBehaviour
     [SerializeField] private Vector3 tomatoLoadLocation;
     [SerializeField] private float firstMoveDuration = 1f;
     [SerializeField] private GameObject truck;
+    [SerializeField] private Collider2D truckCollider;
 
     private int _tomatoCounter;
     private Collider2D _collider;
@@ -35,11 +36,13 @@ public class Crate : MonoBehaviour
         {
             GameEvents.CameraGlide.Invoke();
             _collider.enabled = true;
+            truckCollider.enabled = false;
         }
     }
 
     public void ReachTruck()
     {
+        truckCollider.enabled = true;
         GameEvents.CrateReachedTruck?.Invoke();
         _collider.enabled = false;
     }
