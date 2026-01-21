@@ -72,6 +72,7 @@ public class Girl : MonoBehaviour
 
     private void LeaveKitchen()
     {
+        Debug.Log("Girl leaving kitchen");
         SetWalking();
         transform.DOMove(leaveKitchenLocation, leaveKitchenWalkDuration).SetEase(Ease.Linear).OnComplete(SetIdle);
     }

@@ -8,6 +8,8 @@ public class Sink : MonoBehaviour
     [SerializeField] private Vector3 dropInstantiationLocation = new Vector3(82.449f, 0.678f,0);
     [SerializeField] private Vector3 dropEndPos = new Vector3(82.449f, -0.515f,0);
     [SerializeField] private float dropLifeSpan = 0.2f;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
     
     private void Update()
     {
@@ -36,6 +38,7 @@ public class Sink : MonoBehaviour
 
     private void Dropdrop()
     {
+        audioSource.PlayOneShot(audioClip);
         var drop = Instantiate(dropPrefab, dropInstantiationLocation, Quaternion.identity);
         Transform dropTransform = drop.transform;
 
@@ -46,6 +49,7 @@ public class Sink : MonoBehaviour
     private void KillDrop(GameObject drop)
     {
         Destroy(drop);
+        GameEvents.TimePassed?.Invoke();
     }
     
 }

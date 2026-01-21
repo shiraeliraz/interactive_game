@@ -1,0 +1,327 @@
+fileFormatVersion: 2
+guid: 4bb69d16316d74309bd624de44fe345a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1799097436620552165
+    second: Steam 2_0
+  - first:
+      213: -8863095629679901145
+    second: Steam 2_1
+  - first:
+      213: 6171003624236774094
+    second: Steam 2_2
+  - first:
+      213: -4913625610133379265
+    second: Steam 2_3
+  - first:
+      213: -8964291000157736141
+    second: Steam 2_4
+  - first:
+      213: 794626218804445462
+    second: Steam 2_5
+  - first:
+      213: -8758202592896320851
+    second: Steam 2_6
+  - first:
+      213: 9180511144588192065
+    second: Steam 2_7
+  - first:
+      213: 1257639887469777774
+    second: Steam 2_8
+  - first:
+      213: -3651215543765790775
+    second: Steam 2_9
+  - first:
+      213: -5012601286826478995
+    second: Steam 2_10
+  - first:
+      213: 3433933411889106867
+    second: Steam 2_11
+  - first:
+      213: -4995977702232052479
+    second: Steam 2_12
+  - first:
+      213: -7024064256917400405
+    second: Steam 2_13
+  - first:
+      213: 1542635990767831348
+    second: Steam 2_14
+  - first:
+      213: -1763394947225190059
+    second: Steam 2_15
+  - first:
+      213: 7452241580945661123
+    second: Steam 2_16
+  - first:
+      213: -938325512062352207
+    second: Steam 2_17
+  - first:
+      213: -5607032154968397567
+    second: Steam 2_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Steam 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 117
+        height: 195
+      alignment: 9
+      pivot: {x: 0.44991228, y: 0.57984525}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b188ae5d9625807e0800000000000000
+      internalID: -1799097436620552165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steam 2_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 201
+        width: 116
+        height: 201
+      alignment: 9
+      pivot: {x: 0.41073844, y: 0.4784567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726cc96cb75fff480800000000000000
+      internalID: -8863095629679901145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steam 2_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 201
+        width: 116
+        height: 201
+      alignment: 9
+      pivot: {x: 0.41157427, y: 0.39740324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2f742d91fc3a550800000000000000
+      internalID: 6171003624236774094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steam 2_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 201
+        width: 116
+        height: 201
+      alignment: 9
+      pivot: {x: 0.47961584, y: 0.35428387}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37ecb48a8b4fcbb0800000000000000
+      internalID: -4913625610133379265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steam 2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 206
+      alignment: 9
+      pivot: {x: 0.4847894, y: 0.35014024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333fd5884d0789380800000000000000
+      internalID: -8964291000157736141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steam 2_5
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 0
+        width: 116
+        height: 201
+      alignment: 9
+      pivot: {x: 0.47903562, y: 0.35251904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6110d0df554170b00800000000000000
+      internalID: 794626218804445462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 21dfdb99892414d31be2b1be9790bda0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":116.0,"y":201.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Steam 2_0: -1799097436620552165
+      Steam 2_1: -8863095629679901145
+      Steam 2_2: 6171003624236774094
+      Steam 2_3: -4913625610133379265
+      Steam 2_4: -8964291000157736141
+      Steam 2_5: 794626218804445462
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

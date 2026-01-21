@@ -30,6 +30,7 @@ public class MarketTomato : MonoBehaviour
     private bool _atCrate = true;
     private bool _canBeBought = false;
     private bool _canBeAtKitchen = false;
+    private bool _inKitchen = false;
     private Tomato _tomatoScript;
     
 
@@ -78,14 +79,14 @@ public class MarketTomato : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.AllTomatoesInMarket += EnableBuy;
-        GameEvents.TomatoInBag += DisableBuy;
+        GameEvents.BoughtTomato += DisableBuy;
         GameEvents.DoorOpened += CanBePutInKitchen;
     }
 
     private void OnDisable()
     {
         GameEvents.AllTomatoesInMarket -= EnableBuy;
-        GameEvents.TomatoInBag -= DisableBuy;
+        GameEvents.BoughtTomato -= DisableBuy;
         GameEvents.DoorOpened -= CanBePutInKitchen;
     }
 
@@ -100,6 +101,7 @@ public class MarketTomato : MonoBehaviour
     }
     private void JumpToBag()
     {
+        GameEvents.BoughtTomato?.Invoke();
         audioSource.PlayOneShot(swooshSound);
         _atCrate = false;
         transform.parent = bag.transform;
@@ -119,7 +121,13 @@ public class MarketTomato : MonoBehaviour
 
     private void FinishedJumpToKitchen()
     {
+        if (_inKitchen)
+        {
+            return;
+        }
         GameEvents.TomatoInKitchen?.Invoke();
+        Debug.Log("tomato in kitchen");
+        _inKitchen = true;
     }
 
     private void FinishedJumpToMarket()

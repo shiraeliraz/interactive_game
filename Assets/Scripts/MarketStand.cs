@@ -39,11 +39,11 @@ public class MarketStand : MonoBehaviour
 
     private void MarketSoundOff()
     {
-        _audioSource.DOFade(0f, 0.5f)   // fade to 0 volume over 0.5 seconds
+        _audioSource.DOFade(0f, 0.5f)
             .OnComplete(() =>
             {
                 _audioSource.enabled = false;   
-                _audioSource.volume = 1f;       // reset for next use
+                _audioSource.volume = 1f;
             });
     }
 

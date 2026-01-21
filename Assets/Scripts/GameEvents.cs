@@ -14,5 +14,9 @@ public class GameEvents
     public static Action TomatoInBag;
     public static Action DoorOpened;
     public static Action TomatoInKitchen;
+    public static Action TimePassed;
+    public static Action TomatoIsRotten;
+    public static Action BoughtTomato;
+    public static Action SingleRotPhase;
 
 }

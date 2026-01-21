@@ -1,19 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InfiniteClicks : MonoBehaviour
+public class Clock : MonoBehaviour
 {
-    private bool _isPlaying;
-    private Animator _animator;
     [SerializeField] private AudioSource audioSource;
-
-    private void Start()
-    {
-        _animator = GetComponent<Animator>();
-        _animator.enabled = false;
-        audioSource.enabled = false;
-    }
-
+    [SerializeField] private int timeForRot = 5;
+    private Animator _animator;
+    private bool _isPlaying;
+    
     private void Update()
     {
         bool pressed =
@@ -35,21 +30,38 @@ public class InfiniteClicks : MonoBehaviour
 
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            if (_isPlaying)
-            {
-                return;
-            }
-            _isPlaying = true;
-            _animator.enabled = true;
-            audioSource.enabled = true;
+            GameEvents.TimePassed?.Invoke();
         }
     }
 
-    public void FinishedPlaying()
+    private void OnEnable()
     {
+        GameEvents.TimePassed +=  OnTimePassed;
+        audioSource.enabled = false;
+        _animator = GetComponent<Animator>();
+        _animator.enabled = false;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.TimePassed -= OnTimePassed;
+    }
+
+    private void OnTimePassed()
+    {
+        if (_isPlaying)
+        {
+            return;
+        }
+        _isPlaying = true;
+        _animator.enabled = true;
+        audioSource.enabled = true;
+    }
+
+    public void StopAudio()
+    {
+        audioSource.enabled = false;
         _animator.enabled = false;
         _isPlaying = false;
-        audioSource.enabled = false;
-        GameEvents.TimePassed?.Invoke();
     }
 }

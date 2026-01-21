@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 391026557139094787}
   - component: {fileID: 2554856799861128144}
   - component: {fileID: 1483058746341331315}
+  - component: {fileID: 6417434266102161235}
   m_Layer: 0
   m_Name: marketTomato
   m_TagString: Untagged
@@ -251,3 +252,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6417434266102161235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6053020348264969592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b2fc22287cf400799cc235cb35dadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TomatoColor
+  _colors:
+  - {r: 0.6603774, g: 0.32390407, b: 0.252314, a: 1}
+  - {r: 0.3679245, g: 0.11387505, b: 0.06768423, a: 1}
+  - {r: 0.1981132, g: 0.085911945, b: 0.06448024, a: 1}
