@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,10 +15,17 @@ public class MarketTomato : MonoBehaviour
     [SerializeField] private GameObject bag;
     [SerializeField] private float jumpPower2 = 2f;
     [SerializeField] private float duration2 = 1f;
+    
+    [Header("Kitchen Settings")]
+    [SerializeField] private Vector3 kitchenTargetPos = new Vector3(85.215f,0.816f,0);
+    [SerializeField] private Vector3 kitchenTargetRot = new Vector3(0,0,12.798f);
+    [SerializeField] private float jumpPower3 = 2f;
+    [SerializeField] private float duration3 = 1f;
 
 
     private bool _atCrate = true;
     private bool _canBeBought = false;
+    private bool _canBeAtKitchen = false;
     private Tomato _tomatoScript;
     private void Update()
     {
@@ -44,14 +52,19 @@ public class MarketTomato : MonoBehaviour
             if (_atCrate)
             {
                 JumpToMarket();
+                return;
             }
-            else
+            if (_canBeBought)
             {
-                if (_canBeBought)
-                {
-                    JumpToBag();
-                }
+                JumpToBag();
+                return;
             }
+
+            if (_canBeAtKitchen)
+            {
+                JumpToKitchen();
+            }
+            
             
         }
     }
@@ -60,12 +73,14 @@ public class MarketTomato : MonoBehaviour
     {
         GameEvents.AllTomatoesInMarket += EnableBuy;
         GameEvents.TomatoInBag += DisableBuy;
+        GameEvents.DoorOpened += CanBePutInKitchen;
     }
 
     private void OnDisable()
     {
         GameEvents.AllTomatoesInMarket -= EnableBuy;
         GameEvents.TomatoInBag -= DisableBuy;
+        GameEvents.DoorOpened -= CanBePutInKitchen;
     }
 
     private void JumpToMarket()
@@ -82,6 +97,19 @@ public class MarketTomato : MonoBehaviour
         transform.parent = bag.transform;
         transform.DOJump(bag.transform.position, jumpPower2, 1, duration2)
             .SetUpdate(true).OnComplete(FinishedJumpToBag);
+        transform.DORotate(kitchenTargetRot, 0.25f)
+            .SetEase(Ease.Linear);
+    }
+
+    private void JumpToKitchen()
+    {
+        transform.DOJump(kitchenTargetPos, jumpPower, 1, duration)
+            .SetUpdate(true).OnComplete(FinishedJumpToKitchen);
+    }
+
+    private void FinishedJumpToKitchen()
+    {
+        GameEvents.TomatoInKitchen?.Invoke();
     }
 
     private void FinishedJumpToMarket()
@@ -102,5 +130,10 @@ public class MarketTomato : MonoBehaviour
     private void DisableBuy()
     {
         _canBeBought = false;
+    }
+
+    private void CanBePutInKitchen()
+    {
+        _canBeAtKitchen = true;
     }
 }

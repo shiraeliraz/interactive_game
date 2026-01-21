@@ -13,5 +13,6 @@ public class GameEvents
     public static Action AllTomatoesInMarket;
     public static Action TomatoInBag;
     public static Action DoorOpened;
+    public static Action TomatoInKitchen;
 
 }
