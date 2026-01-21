@@ -9,6 +9,8 @@ public class Tomato : MonoBehaviour
     [SerializeField] private float duration = 0.6f;
     [SerializeField] private GameObject crate;
     [SerializeField] private GameObject tomatoToActivate;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip swooshSound;
     private bool _inCrate = false;
     private Rigidbody2D _rigidbody;
 
@@ -35,6 +37,7 @@ public class Tomato : MonoBehaviour
 
     private void Jump()
     {
+        audioSource.PlayOneShot(swooshSound);
         transform.SetParent(null);
 
         transform.DOJump(crateTarget, jumpPower, 1, duration)

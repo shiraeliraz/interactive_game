@@ -8,6 +8,8 @@ public class Crate : MonoBehaviour
     [SerializeField] private float firstMoveDuration = 1f;
     [SerializeField] private GameObject truck;
     [SerializeField] private Collider2D truckCollider;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
 
     private int _tomatoCounter;
     private Collider2D _collider;
@@ -42,6 +44,7 @@ public class Crate : MonoBehaviour
 
     public void ReachTruck()
     {
+        audioSource.PlayOneShot(audioClip);
         truckCollider.enabled = true;
         GameEvents.CrateReachedTruck?.Invoke();
         _collider.enabled = false;
@@ -60,6 +63,7 @@ public class Crate : MonoBehaviour
     public void CrateReachedFloor()
     {
         GameEvents.CrateReachedFloor?.Invoke();
+        audioSource.PlayOneShot(audioClip);
     }
 
 }

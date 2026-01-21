@@ -1,21 +1,13 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayOnClick : MonoBehaviour
+public class InfiniteClicks : MonoBehaviour
 {
-    [SerializeField] private List<string> animationNames;
-    [SerializeField] private Collider2D colliderToEnable;
-
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private List<AudioClip> clickSounds;
-
-    private int _currentAnimation = 0;
-    private Animator _animator;
     private bool _isPlaying;
+    private Animator _animator;
+    [SerializeField] private string triggerName;
 
-    private void Awake()
+    private void Start()
     {
         _animator = GetComponent<Animator>();
         _animator.enabled = false;
@@ -30,7 +22,6 @@ public class PlayOnClick : MonoBehaviour
 
         if (!pressed)
             return;
-
         Vector2 screenPos =
             Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame
                 ? Mouse.current.position.ReadValue()
@@ -44,32 +35,20 @@ public class PlayOnClick : MonoBehaviour
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
             if (_isPlaying)
-                return;
-
-            if (_currentAnimation >= animationNames.Count)
-                return;
-
-            if (audioSource != null && clickSounds[_currentAnimation] != null)
-                audioSource.PlayOneShot(clickSounds[_currentAnimation]);
-            else
             {
-                Debug.Log(gameObject.name + " is missing audio");
+                return;
             }
 
-            _animator.enabled = true;
-            _animator.Play(animationNames[_currentAnimation]);
             _isPlaying = true;
+            _animator.enabled = true;
+            //_animator.SetTrigger(triggerName);
+            
         }
     }
 
-    public void CarryOn()
+    public void FinishedPlaying()
     {
-        _currentAnimation++;
+        _animator.enabled = false;
         _isPlaying = false;
-    }
-
-    public void EnableTheirCollider()
-    {
-        colliderToEnable.enabled = true;
     }
 }

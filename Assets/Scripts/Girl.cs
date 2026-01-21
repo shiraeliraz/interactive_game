@@ -12,6 +12,10 @@ public class Girl : MonoBehaviour
     [SerializeField] private float kitchenWalkDuration;
     [SerializeField] private Vector3 afterDoorLocation;
     [SerializeField] private float afterDoorWalkDuration;
+    [SerializeField] private Vector3 leaveKitchenLocation;
+    [SerializeField] private float leaveKitchenWalkDuration;
+    [SerializeField] private AudioSource footStepSource;
+    [SerializeField] private AudioClip walkingSound;
     
     private Animator _animator;
 
@@ -20,6 +24,7 @@ public class Girl : MonoBehaviour
         GameEvents.AllTomatoesInMarket += MoveToMarket;
         GameEvents.TomatoInBag += GoHome;
         GameEvents.DoorOpened += GoThroughDoor;
+        GameEvents.TomatoInKitchen += LeaveKitchen;
         _animator = GetComponent<Animator>();
     }
 
@@ -28,6 +33,7 @@ public class Girl : MonoBehaviour
         GameEvents.AllTomatoesInMarket -= MoveToMarket;
         GameEvents.TomatoInBag -= GoHome;
         GameEvents.DoorOpened -= GoThroughDoor;
+        GameEvents.TomatoInBag -=  LeaveKitchen;
     }
 
     private void MoveToMarket()
@@ -38,11 +44,13 @@ public class Girl : MonoBehaviour
     private void SetIdle()
     {
         _animator.SetTrigger(Idle);
+        StopFootsteps();
     }
 
     private void SetWalking()
     {
         _animator.SetTrigger(Walking);
+        StartFootsteps();
     }
 
     private void GoHome()
@@ -60,5 +68,27 @@ public class Girl : MonoBehaviour
         SetWalking();
         transform.DOMove(afterDoorLocation, afterDoorWalkDuration).SetEase(Ease.Linear).OnComplete(SetIdle);
         
+    }
+
+    private void LeaveKitchen()
+    {
+        SetWalking();
+        transform.DOMove(leaveKitchenLocation, leaveKitchenWalkDuration).SetEase(Ease.Linear).OnComplete(SetIdle);
+    }
+    
+    private void StartFootsteps()
+    {
+        if (walkingSound == null || footStepSource == null) return;
+
+        footStepSource.clip = walkingSound;
+        footStepSource.loop = true;
+        footStepSource.Play();
+    }
+
+    private void StopFootsteps()
+    {
+        if (footStepSource == null) return;
+
+        footStepSource.Stop();
     }
 }

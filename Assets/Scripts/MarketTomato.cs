@@ -21,12 +21,18 @@ public class MarketTomato : MonoBehaviour
     [SerializeField] private Vector3 kitchenTargetRot = new Vector3(0,0,12.798f);
     [SerializeField] private float jumpPower3 = 2f;
     [SerializeField] private float duration3 = 1f;
+    
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip swooshSound;
+    [SerializeField] private AudioClip coinSound;
 
 
     private bool _atCrate = true;
     private bool _canBeBought = false;
     private bool _canBeAtKitchen = false;
     private Tomato _tomatoScript;
+    
+
     private void Update()
     {
 
@@ -85,6 +91,7 @@ public class MarketTomato : MonoBehaviour
 
     private void JumpToMarket()
     {
+        audioSource.PlayOneShot(swooshSound);
         _atCrate = false;
         transform.DOJump(marketTarget, jumpPower, 1, duration)
             .SetUpdate(true).OnComplete(FinishedJumpToMarket);
@@ -93,6 +100,7 @@ public class MarketTomato : MonoBehaviour
     }
     private void JumpToBag()
     {
+        audioSource.PlayOneShot(swooshSound);
         _atCrate = false;
         transform.parent = bag.transform;
         transform.DOJump(bag.transform.position, jumpPower2, 1, duration2)
@@ -103,6 +111,8 @@ public class MarketTomato : MonoBehaviour
 
     private void JumpToKitchen()
     {
+        audioSource.PlayOneShot(swooshSound);
+        transform.SetParent(null);
         transform.DOJump(kitchenTargetPos, jumpPower, 1, duration)
             .SetUpdate(true).OnComplete(FinishedJumpToKitchen);
     }
@@ -119,6 +129,7 @@ public class MarketTomato : MonoBehaviour
 
     private void FinishedJumpToBag()
     {
+        audioSource.PlayOneShot(coinSound);
         GameEvents.TomatoInBag?.Invoke();
     }
 
