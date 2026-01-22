@@ -14,8 +14,12 @@ public class Girl : MonoBehaviour
     [SerializeField] private float afterDoorWalkDuration;
     [SerializeField] private Vector3 leaveKitchenLocation;
     [SerializeField] private float leaveKitchenWalkDuration;
+    [SerializeField] private Vector3 rottenLocation;
+    [SerializeField] private float rottenDuration;
     [SerializeField] private AudioSource footStepSource;
     [SerializeField] private AudioClip walkingSound;
+    [SerializeField] private GameObject bag;
+    [SerializeField] private AudioSource ewAudioSource;
     
     private Animator _animator;
 
@@ -25,6 +29,7 @@ public class Girl : MonoBehaviour
         GameEvents.TomatoInBag += GoHome;
         GameEvents.DoorOpened += GoThroughDoor;
         GameEvents.TomatoInKitchen += LeaveKitchen;
+        GameEvents.TomatoIsRotten += ViewRottenTomato;
         _animator = GetComponent<Animator>();
     }
 
@@ -34,6 +39,7 @@ public class Girl : MonoBehaviour
         GameEvents.TomatoInBag -= GoHome;
         GameEvents.DoorOpened -= GoThroughDoor;
         GameEvents.TomatoInBag -=  LeaveKitchen;
+        GameEvents.TomatoIsRotten -=  ViewRottenTomato;
     }
 
     private void MoveToMarket()
@@ -55,6 +61,7 @@ public class Girl : MonoBehaviour
 
     private void GoHome()
     {
+        ewAudioSource.enabled = false;
         SetWalking();
         transform.rotation = Quaternion.identity;
         transform.SetParent(null);
@@ -72,9 +79,22 @@ public class Girl : MonoBehaviour
 
     private void LeaveKitchen()
     {
-        Debug.Log("Girl leaving kitchen");
         SetWalking();
         transform.DOMove(leaveKitchenLocation, leaveKitchenWalkDuration).SetEase(Ease.Linear).OnComplete(SetIdle);
+    }
+
+    private void ViewRottenTomato()
+    {
+        bag.transform.SetParent(null);
+        SetWalking();
+        Vector3 flip = new Vector3(0, 180f, 0);
+        transform.DORotate(flip, 0.01f);
+        transform.DOMove(rottenLocation,  rottenDuration).SetEase(Ease.Linear).OnComplete(() =>
+        {
+            SetIdle();
+            ewAudioSource.enabled = true;
+        });
+        
     }
     
     private void StartFootsteps()
